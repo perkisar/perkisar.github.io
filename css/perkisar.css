@@ -315,7 +315,7 @@ a:hover {
 
 /* generic mobile stylings */
 
-@media (min-height:500px) and (min-width:300px){
+@media (max-height:800px) and (max-width:800px){
     .titleGrid {
         height:60px;
     }
