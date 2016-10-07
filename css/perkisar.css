@@ -1,0 +1,282 @@
+﻿/* TABLE OF CONTENTS
+
+	1. Global Styling
+    2. Title Section
+    3. Buttons
+
+
+    ?. Media Queries for Specific Devices
+*/
+
+
+/* 1. GLOBAL STYLING */
+@font-face {
+    font-family: "Josefin Sans Light";
+    font-style: normal;
+    font-weight: 400;
+    src: local("Josefin Sans Light"), local("Josefin Sans Light"),     url("https://fonts.googleapis.com/css?family=Josefin+Sans") format("woff2"), url("https://fonts.googleapis.com/css?family=Josefin+Sans") format("woff");
+}
+
+html, body {
+    background-color:#f4f4f4;
+    height:100%;
+    margin:0;
+    padding:0;
+    font-family: 'Josefin Sans Light', sans-serif !important;
+}
+
+a:hover {
+    text-decoration:unset;
+    text-decoration:none!important;
+}
+
+.grow:hover { 
+    animation: grow 2s;
+}
+
+/* Disable text selection */
+.noSelection {
+    cursor: default;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+
+/* 2. TITLE SECTION */
+
+.section {
+    height:100%;
+}
+
+.flex-container {
+    height:100%;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align:center;
+}
+
+.flex-item {
+    height:100%;
+    width:100%;
+}
+
+.logo {
+    margin-top:40px;
+}
+
+.title h1 {
+    font-size:4vw;
+    margin-top:100px;
+}
+
+.grid {
+    max-width:65%;
+    display:block;
+    margin:0 auto;
+    margin-top:45px;
+}
+.titleGrid {
+    height:200px;
+}
+
+.sectionClick, 
+.sectionClick:hover, 
+.sectionClick:focus {
+    color:#333333;
+}
+
+.sectionClick:nth-child(1) div{
+    /* YELLOW */
+    background-color:#ffea19;
+}
+.sectionClick:nth-child(2) div{
+    /* BLUE */
+    background-color:#14abcc;
+}
+.sectionClick:nth-child(3) div{
+    /* PINK */
+    background-color:#ff0064;
+}
+.sectionClick:nth-child(4) div{
+    /* PURPLE */
+    background-color:#804abb;
+}
+
+.titleGrid h2 {
+    font-size:4vw;
+    overflow:hidden;
+    line-height:10vw;
+}
+
+/* TITLE GRID MEDIA QUERIES */
+@media (max-width:1200px){
+    .titleGrid h2 {
+        font-size:2vw;
+        line-height:unset;
+    }
+}
+
+@media (max-width:990px){
+    .logo {
+        /*width:12vh;*/
+    }
+    .titleGrid h2 {
+        font-size:5vw;
+    }
+}
+
+@media (max-width:767px){
+    .titleGrid h2 {
+        font-size:6vw;
+    }
+}
+
+@media (max-width:550px){
+    .title h1 {
+        font-size:40px;
+    }
+
+    .onepage-pagination {
+        display:none;
+    }
+}
+
+@media (max-width:350px){
+    .logo {
+        /*width:8vh;*/
+    }
+}
+
+@media (min-width:670px){
+    .titleGrid h2 {
+        font-weight:400;
+        font-weight:normal;
+    }
+}
+
+/* HEIGHT MEDIA QUERY TO ADJUST TITLE GRID TO FIT MOST MOBILE DEVICES */
+@media (min-height:800px) and (max-width:1200px){
+    .titleGrid {
+        max-height:150px;
+    }
+}
+
+@media (max-height:800px){
+    .titleGrid {
+        max-height:80px;
+    }
+}
+
+/* HEIGHT MEDIA QUERY FOR iPAD */
+@media (height:1024px){
+    .titleGrid {
+        height:150px;
+    }
+}
+
+/* HEIGHT MEDIA QUERY FOR GALAXY S5 */
+@media (height:640px){
+    .titleGrid {
+        height:60px;
+    }
+
+}
+
+/* HEIGHT MEDIA QUERY FOR iPHONE 5 */
+@media (height:568px){
+    .titleGrid {
+        height:60px;
+    }
+}
+
+/* CSS TITLE GRID ANIMATIONS */
+.titleGrid:hover, .titleGrid:focus {
+    animation-duration:2s;
+    animation-name:hovertitle;
+    animation-fill-mode:forwards;
+    /* fill-mode:forwards prevents animation reset until hover is complete */
+}
+
+.grow:hover {
+    animation-duration:2s;
+    animation-name:grow;
+    animation-fill-mode:forwards;
+}
+
+   
+@keyframes hovertitle {
+    from {
+       
+    }
+
+    to {
+        background-color:rgba(0,0,0,.8);
+        color:#ffffff;
+    }
+}
+
+@keyframes grow {
+    0% {
+
+    }
+    100% {
+        transition: all 2s ease-in-out; 
+        transform: scale(1.1); 
+    }
+}
+
+.waitText {
+    font-size:22px; max-width:800px; display:block; margin:0 auto;
+}
+
+/* 3. BUTTONS */
+
+.doIt {
+    background-color:#14abcc;
+    max-width:200px;
+    width:100%;
+    display:block;
+    margin: 0 auto;
+    margin-top:100px;
+    height:50px;
+    line-height:50px;
+    font-size:25px;
+    text-align:center;
+    border-radius:2px;
+    color:#fff;
+    font-weight:bold;
+    font-weight:700;
+    font-size:30px;
+}
+
+/* SPECIFIC DEVICE STYLING - MEDIA QUERIES */
+/* NEXUX 10 STYLING */
+@media (width:800px) and (height:1280px){
+    .title h1:nth-child(2)  {
+        font-size:7.41vw;
+    }
+    .waitText {
+        font-size:5vw;
+        text-align:justify;
+    }
+
+    .flex-container {
+        width:700px;
+    }
+
+    .logo {
+        width:300px;
+    }
+
+    .title h1 {
+        font-size:10px;
+    }
+}
