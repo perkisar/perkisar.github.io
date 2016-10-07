@@ -301,3 +301,22 @@ a:hover {
     }
 
 }
+
+.portfolio {
+    margin-top:100px;
+    font-size:25px;
+}
+
+.portfolio i {
+    padding:25px;
+}
+
+.portfolio a,
+.waitText a:hover {
+    color:#000;
+}
+
+.portfolio a:hover,
+.waitText a {
+    color:#ff0064;
+}
