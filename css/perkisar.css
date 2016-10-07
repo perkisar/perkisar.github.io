@@ -280,3 +280,24 @@ a:hover {
         font-size:10px;
     }
 }
+
+
+
+
+
+/* IN PROGRESS CONSTRUCTION */
+.onepage-pagination, 
+.section:nth-child(2),
+.section:nth-child(3),
+.section:nth-child(4),
+.section:nth-child(5)
+ {
+    display:none;
+}
+
+@media(min-width:1200px){
+    .noSelection {
+        margin-top:125px;
+    }
+
+}
