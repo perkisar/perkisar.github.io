@@ -182,14 +182,6 @@ a:hover {
     }
 }
 
-/* HEIGHT MEDIA QUERY FOR GALAXY S5 */
-@media (height:640px){
-    .titleGrid {
-        height:60px;
-    }
-
-}
-
 /* HEIGHT MEDIA QUERY FOR iPHONE 5 */
 @media (height:568px){
     .titleGrid {
@@ -319,4 +311,199 @@ a:hover {
 .portfolio a:hover,
 .waitText a {
     color:#ff0064;
+}
+
+/* generic mobile stylings */
+
+@media (min-height:500px) and (min-width:300px){
+    .titleGrid {
+        height:60px;
+    }
+    .noSelection{margin-top:30px;}
+    
+    .title h1 {
+        margin-top:30px;
+        font-size:25px;
+        font-weight:700;
+        
+    }
+
+    .portfolio {
+        margin-top:30px;
+        font-size:18px;
+    }
+
+    .waitText{
+        font-size:18px;
+    }
+
+    .portfolio i {
+        font-size:25px;
+        padding:15px;
+    }
+}
+
+/* GALAXY S5 */
+@media (height:640px) and (width:360px){
+    .titleGrid {
+        height:60px;
+    }
+
+    .title h1 {
+        margin-top:20px;
+    }
+
+    .portfolio {
+        margin-top:30px;
+    }
+}
+
+/* NEXUS 5X */
+@media (height:732px) and (width:412px){
+    .titleGrid {
+        height:60px;
+    }
+
+    .title h1 {
+        margin-top:40px;
+    }
+
+    .portfolio {
+        margin-top:40px;
+    }
+}
+
+/* NEXUS 10 */
+@media (height:1280px) and (width:800px){
+    .titleGrid {
+        height:60px;
+    }
+    .noSelection{margin-top:100px;}
+    .title h1 {
+        margin-top:100px;
+        font-size:50px;
+        font-weight:700;
+    }
+
+    .waitText {
+        font-size:50px;
+    }
+
+    .portfolio {
+        font-size:50px;
+    }
+
+    .portfolio {
+        margin-top:100px;
+    }
+}
+
+/* NEXUS 7 */
+@media (height:1280px) and (width:800px){
+    .titleGrid {
+        height:60px;
+    }
+    .noSelection{margin-top:100px;}
+    .title h1 {
+        margin-top:100px;
+        font-size:50px;
+        font-weight:700;
+    }
+
+    .waitText {
+        font-size:50px;
+    }
+
+    .portfolio {
+        font-size:50px;
+    }
+
+    .portfolio {
+        margin-top:100px;
+    }
+}
+
+/* iPHONE 5 */
+@media (height:568px) and (width:320px){
+    .titleGrid {
+        height:60px;
+    }
+
+    .title h1 {
+        margin-top:20px;
+        font-size:25px;
+        font-weight:bold;
+    }
+
+    .waitText {
+        font-size:18px;
+    }
+
+    .portfolio {
+        margin-top:30px;
+    }
+}
+
+/* iPHONE 6 */
+@media (height:667px) and (width:375px){
+    .titleGrid {
+        height:60px;
+    }
+
+    .title h1 {
+        margin-top:40px;
+        font-size:35px;
+    }
+
+    .waitText {
+        font-size:18px;
+    }
+
+    .portfolio {
+        margin-top:40px;
+    }
+}
+
+/* iPHONE 6+ */
+@media (height:736px) and (width:414px){
+    .titleGrid {
+        height:60px;
+    }
+
+    .title h1 {
+        margin-top:50px;
+    }
+
+    .waitText {
+        font-size:20px;
+    }
+
+    .portfolio {
+        margin-top:50px;
+    }
+}
+
+
+/* iPAD */
+@media (height:1024px) and (width:768px){
+    .titleGrid {
+        height:60px;
+    }
+    .noSelection{margin-top:100px;}
+    .title h1 {
+        margin-top:100px;
+        font-size:50px;
+    }
+
+    .waitText {
+        font-size:30px;
+    }
+
+    .portfolio {
+        font-size:30px;
+    }
+
+    .portfolio {
+        margin-top:100px;
+    }
 }
