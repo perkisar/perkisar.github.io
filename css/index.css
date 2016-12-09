@@ -1,0 +1,510 @@
+﻿/* TABLE OF CONTENTS
+
+	1. Global Styling
+    2. Title Section
+    3. Buttons
+
+
+    ?. Media Queries for Specific Devices
+*/
+
+
+/* 1. GLOBAL STYLING */
+@font-face {
+    font-family: "Josefin Sans Light";
+    font-style: normal;
+    font-weight: 400;
+    src: local("Josefin Sans Light"), local("Josefin Sans Light"),     url("https://fonts.googleapis.com/css?family=Josefin+Sans") format("woff2"), url("https://fonts.googleapis.com/css?family=Josefin+Sans") format("woff");
+}
+
+html, body {
+    background-color:#f4f4f4;
+    height:100%;
+    margin:0;
+    padding:0;
+    font-family: 'Josefin Sans Light', sans-serif !important;
+}
+
+a:hover {
+    text-decoration:unset;
+    text-decoration:none!important;
+}
+
+.grow:hover { 
+    animation: grow 2s;
+}
+
+/* Disable text selection */
+.noSelection {
+    cursor: default;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+
+/* 2. TITLE SECTION */
+
+.section {
+    height:100%;
+}
+
+.flex-container {
+    height:100%;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align:center;
+}
+
+.flex-item {
+    height:100%;
+    width:100%;
+}
+
+.logo {
+    margin-top:40px;
+}
+
+.title h1 {
+    font-size:4vw;
+    margin-top:100px;
+}
+
+.grid {
+    max-width:65%;
+    display:block;
+    margin:0 auto;
+    margin-top:45px;
+}
+.titleGrid {
+    height:200px;
+}
+
+.sectionClick, 
+.sectionClick:hover, 
+.sectionClick:focus {
+    color:#333333;
+}
+
+.sectionClick:nth-child(1) div{
+    /* YELLOW */
+    background-color:#ffea19;
+}
+.sectionClick:nth-child(2) div{
+    /* BLUE */
+    background-color:#14abcc;
+}
+.sectionClick:nth-child(3) div{
+    /* PINK */
+    background-color:#ff0064;
+}
+.sectionClick:nth-child(4) div{
+    /* PURPLE */
+    background-color:#804abb;
+}
+
+.titleGrid h2 {
+    font-size:4vw;
+    overflow:hidden;
+    line-height:10vw;
+}
+
+/* TITLE GRID MEDIA QUERIES */
+@media (max-width:1200px){
+    .titleGrid h2 {
+        font-size:2vw;
+        line-height:unset;
+    }
+}
+
+@media (max-width:990px){
+    .logo {
+        /*width:12vh;*/
+    }
+    .titleGrid h2 {
+        font-size:5vw;
+    }
+}
+
+@media (max-width:767px){
+    .titleGrid h2 {
+        font-size:6vw;
+    }
+}
+
+@media (max-width:550px){
+    .title h1 {
+        font-size:40px;
+    }
+
+    .onepage-pagination {
+        display:none;
+    }
+}
+
+@media (max-width:350px){
+    .logo {
+        /*width:8vh;*/
+    }
+}
+
+@media (min-width:670px){
+    .titleGrid h2 {
+        font-weight:400;
+        font-weight:normal;
+    }
+}
+
+/* HEIGHT MEDIA QUERY TO ADJUST TITLE GRID TO FIT MOST MOBILE DEVICES */
+@media (min-height:800px) and (max-width:1200px){
+    .titleGrid {
+        max-height:150px;
+    }
+}
+
+@media (max-height:800px){
+    .titleGrid {
+        max-height:80px;
+    }
+}
+
+/* HEIGHT MEDIA QUERY FOR iPAD */
+@media (height:1024px){
+    .titleGrid {
+        height:150px;
+    }
+}
+
+/* HEIGHT MEDIA QUERY FOR iPHONE 5 */
+@media (height:568px){
+    .titleGrid {
+        height:60px;
+    }
+}
+
+/* CSS TITLE GRID ANIMATIONS */
+.titleGrid:hover, .titleGrid:focus {
+    animation-duration:2s;
+    animation-name:hovertitle;
+    animation-fill-mode:forwards;
+    /* fill-mode:forwards prevents animation reset until hover is complete */
+}
+
+.grow:hover {
+    animation-duration:2s;
+    animation-name:grow;
+    animation-fill-mode:forwards;
+    color:rgba(1,112,186,1);
+}
+
+   
+@keyframes hovertitle {
+    from {
+       
+    }
+
+    to {
+        background-color:rgba(0,0,0,.8);
+        color:#ffffff;
+    }
+}
+
+@keyframes grow {
+    0% {
+
+    }
+    100% {
+        transition: all 2s ease-in-out; 
+        transform: scale(1.1); 
+    }
+}
+
+.waitText {
+    font-size:22px; max-width:800px; display:block; margin:0 auto;
+}
+
+/* 3. BUTTONS */
+
+.doIt {
+    background-color:#14abcc;
+    max-width:200px;
+    width:100%;
+    display:block;
+    margin: 0 auto;
+    margin-top:100px;
+    height:50px;
+    line-height:50px;
+    font-size:25px;
+    text-align:center;
+    border-radius:2px;
+    color:#fff;
+    font-weight:bold;
+    font-weight:700;
+    font-size:30px;
+}
+
+/* SPECIFIC DEVICE STYLING - MEDIA QUERIES */
+/* NEXUX 10 STYLING */
+@media (width:800px) and (height:1280px){
+    .title h1:nth-child(2)  {
+        font-size:7.41vw;
+    }
+    .waitText {
+        font-size:5vw;
+        text-align:justify;
+    }
+
+    .flex-container {
+        width:700px;
+    }
+
+    .logo {
+        width:300px;
+    }
+
+    .title h1 {
+        font-size:10px;
+    }
+}
+
+
+
+
+
+/* IN PROGRESS CONSTRUCTION */
+.onepage-pagination, 
+.section:nth-child(2),
+.section:nth-child(3),
+.section:nth-child(4),
+.section:nth-child(5)
+ {
+    display:none;
+}
+
+@media(min-width:1200px){
+    .noSelection {
+        margin-top:125px;
+    }
+
+}
+
+.portfolio {
+    margin-top:100px;
+    font-size:25px;
+}
+
+.portfolio i {
+    padding:25px;
+}
+
+.portfolio a,
+.waitText a:hover {
+    color:#000;
+}
+
+.portfolio a:hover,
+.waitText a {
+    color:#ff0064;
+}
+
+/* generic mobile stylings */
+
+@media (max-height:800px) and (max-width:800px){
+    .titleGrid {
+        height:60px;
+    }
+    .noSelection{margin-top:30px;}
+    
+    .title h1 {
+        margin-top:30px;
+        font-size:25px;
+        font-weight:700;
+        
+    }
+
+    .portfolio {
+        margin-top:30px;
+        font-size:18px;
+    }
+
+    .waitText{
+        font-size:18px;
+    }
+
+    .portfolio i {
+        font-size:25px;
+        padding:15px;
+    }
+}
+
+/* GALAXY S5 */
+@media (height:640px) and (width:360px){
+    .titleGrid {
+        height:60px;
+    }
+
+    .title h1 {
+        margin-top:20px;
+    }
+
+    .portfolio {
+        margin-top:30px;
+    }
+}
+
+/* NEXUS 5X */
+@media (height:732px) and (width:412px){
+    .titleGrid {
+        height:60px;
+    }
+
+    .title h1 {
+        margin-top:40px;
+    }
+
+    .portfolio {
+        margin-top:40px;
+    }
+}
+
+/* NEXUS 10 */
+@media (height:1280px) and (width:800px){
+    .titleGrid {
+        height:60px;
+    }
+    .noSelection{margin-top:100px;}
+    .title h1 {
+        margin-top:100px;
+        font-size:50px;
+        font-weight:700;
+    }
+
+    .waitText {
+        font-size:50px;
+    }
+
+    .portfolio {
+        font-size:50px;
+    }
+
+    .portfolio {
+        margin-top:100px;
+    }
+}
+
+/* NEXUS 7 */
+@media (height:1280px) and (width:800px){
+    .titleGrid {
+        height:60px;
+    }
+    .noSelection{margin-top:100px;}
+    .title h1 {
+        margin-top:100px;
+        font-size:50px;
+        font-weight:700;
+    }
+
+    .waitText {
+        font-size:50px;
+    }
+
+    .portfolio {
+        font-size:50px;
+    }
+
+    .portfolio {
+        margin-top:100px;
+    }
+}
+
+/* iPHONE 5 */
+@media (height:568px) and (width:320px){
+    .titleGrid {
+        height:60px;
+    }
+
+    .title h1 {
+        margin-top:20px;
+        font-size:25px;
+        font-weight:bold;
+    }
+
+    .waitText {
+        font-size:18px;
+    }
+
+    .portfolio {
+        margin-top:30px;
+    }
+}
+
+/* iPHONE 6 */
+@media (height:667px) and (width:375px){
+    .titleGrid {
+        height:60px;
+    }
+
+    .title h1 {
+        margin-top:40px;
+        font-size:35px;
+    }
+
+    .waitText {
+        font-size:18px;
+    }
+
+    .portfolio {
+        margin-top:40px;
+    }
+}
+
+/* iPHONE 6+ */
+@media (height:736px) and (width:414px){
+    .titleGrid {
+        height:60px;
+    }
+
+    .title h1 {
+        margin-top:50px;
+    }
+
+    .waitText {
+        font-size:20px;
+    }
+
+    .portfolio {
+        margin-top:50px;
+    }
+}
+
+
+/* iPAD */
+@media (height:1024px) and (width:768px){
+    .titleGrid {
+        height:60px;
+    }
+    .noSelection{margin-top:100px;}
+    .title h1 {
+        margin-top:100px;
+        font-size:50px;
+    }
+
+    .waitText {
+        font-size:30px;
+    }
+
+    .portfolio {
+        font-size:30px;
+    }
+
+    .portfolio {
+        margin-top:100px;
+    }
+}

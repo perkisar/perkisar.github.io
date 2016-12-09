@@ -1,11 +1,9 @@
 ﻿/* TABLE OF CONTENTS
 
 	1. Global Styling
-    2. Title Section
-    3. Buttons
-
-
-    ?. Media Queries for Specific Devices
+    2. Vertical Centerring
+    3. Header
+    4. Section One
 */
 
 
@@ -17,493 +15,367 @@
     src: local("Josefin Sans Light"), local("Josefin Sans Light"),     url("https://fonts.googleapis.com/css?family=Josefin+Sans") format("woff2"), url("https://fonts.googleapis.com/css?family=Josefin+Sans") format("woff");
 }
 
+@font-face {font-family:'devicons';
+    src:url('../fonts/devicons.eot?xqxft6');
+    src:url('../fonts/devicons.eot?#iefixxqxft6') format('embedded-opentype'), url('../fonts/devicons.woff?xqxft6') format('woff'), url('../fonts/devicons.ttf?xqxft6') format('truetype'), url('../fonts/devicons.svg?xqxft6#devicons') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
 html, body {
-    background-color:#f4f4f4;
+    background-color:#ebebeb;
+    background:url(https://static.pexels.com/photos/64777/pexels-photo-64777.jpeg);
+    background-repeat:no-repeat;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
     height:100%;
     margin:0;
     padding:0;
     font-family: 'Josefin Sans Light', sans-serif !important;
 }
 
-a:hover {
-    text-decoration:unset;
-    text-decoration:none!important;
-}
-
-.grow:hover { 
-    animation: grow 2s;
-}
-
-/* Disable text selection */
-.noSelection {
-    cursor: default;
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-}
-
-
-/* 2. TITLE SECTION */
-
-.section {
-    height:100%;
-}
-
-.flex-container {
-    height:100%;
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align:center;
-}
-
-.flex-item {
-    height:100%;
-    width:100%;
-}
-
-.logo {
-    margin-top:40px;
-}
-
-.title h1 {
-    font-size:4vw;
-    margin-top:100px;
-}
-
-.grid {
-    max-width:65%;
-    display:block;
-    margin:0 auto;
-    margin-top:45px;
-}
-.titleGrid {
-    height:200px;
-}
-
-.sectionClick, 
-.sectionClick:hover, 
-.sectionClick:focus {
-    color:#333333;
-}
-
-.sectionClick:nth-child(1) div{
-    /* YELLOW */
-    background-color:#ffea19;
-}
-.sectionClick:nth-child(2) div{
-    /* BLUE */
-    background-color:#14abcc;
-}
-.sectionClick:nth-child(3) div{
-    /* PINK */
-    background-color:#ff0064;
-}
-.sectionClick:nth-child(4) div{
-    /* PURPLE */
-    background-color:#804abb;
-}
-
-.titleGrid h2 {
-    font-size:4vw;
+@media (min-width:500px){
+    html {
     overflow:hidden;
-    line-height:10vw;
+}
 }
 
-/* TITLE GRID MEDIA QUERIES */
-@media (max-width:1200px){
-    .titleGrid h2 {
-        font-size:2vw;
-        line-height:unset;
-    }
+section {
+    height:100%;
 }
 
-@media (max-width:990px){
-    .logo {
-        /*width:12vh;*/
-    }
-    .titleGrid h2 {
-        font-size:5vw;
-    }
+a, a:focus {
+    color:#a2b881;
+    text-decoration:none;
 }
 
-@media (max-width:767px){
-    .titleGrid h2 {
-        font-size:6vw;
-    }
+a:hover {
+    text-decoration: unset;
+    text-decoration: none !important;
 }
 
-@media (max-width:550px){
-    .title h1 {
-        font-size:40px;
-    }
+/* 2. Navigation  */
+nav {
+    position:absolute;
+    position:fixed;
+    width:100%;
+    padding:20px 20px 0 0;
+}
 
-    .onepage-pagination {
+.one {
+    top:0;
+   
+}
+
+.two {
+    top:100%;
+}
+
+.three {
+    top:200%;
+}
+.four {
+    top:300%;
+}
+
+nav ul {
+    list-style:none;
+    padding:unset;
+    margin:unset;
+    float:right;
+}
+
+@media (max-width:800px){
+    nav ul {
         display:none;
     }
 }
 
-@media (max-width:350px){
-    .logo {
-        /*width:8vh;*/
-    }
+nav li {
+    display:inline;
+    padding: 0 10px 0 10px;
+    font-size:2em;
 }
 
-@media (min-width:670px){
-    .titleGrid h2 {
-        font-weight:400;
-        font-weight:normal;
-    }
+/* 2. Vertical Centering */
+
+#header {
+    height:100%;
+    color:#cecece;
 }
 
-/* HEIGHT MEDIA QUERY TO ADJUST TITLE GRID TO FIT MOST MOBILE DEVICES */
-@media (min-height:800px) and (max-width:1200px){
-    .titleGrid {
-        max-height:150px;
-    }
+.flexParent {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-@media (max-height:800px){
-    .titleGrid {
-        max-height:80px;
-    }
+.flexContainer {
+    max-width: 50%;
 }
 
-/* HEIGHT MEDIA QUERY FOR iPAD */
-@media (height:1024px){
-    .titleGrid {
-        height:150px;
-    }
+/* SVG Header Text */
+.svg-wrapper {
+  
+  margin: 0 auto;
+  width: 320px;  
+}
+.shape {
+  stroke-dasharray: 140 540;
+  stroke-dashoffset: -510;
+  stroke-width: 8px;
+  fill: transparent;
+  stroke: #a2b881;
+  border-bottom: 5px solid black;
+  transition: stroke-width 2s, stroke-dashoffset 1s, stroke-dasharray 1s;
+}
+.text {
+  font-family: "Josefin Sans Light";
+  font-size: 6em;
+  line-height: 32px;
+  letter-spacing: 8px;
+  color: #fff;
+  top: -78px;
+  position: relative;
+}
+.svg-wrapper:hover .shape {
+  stroke-width: 2px;
+  stroke-dashoffset: 0;
+  stroke-dasharray: 850; /* Dashes in the line */
 }
 
-/* HEIGHT MEDIA QUERY FOR iPHONE 5 */
-@media (height:568px){
-    .titleGrid {
-        height:60px;
-    }
-}
-
-/* CSS TITLE GRID ANIMATIONS */
-.titleGrid:hover, .titleGrid:focus {
-    animation-duration:2s;
-    animation-name:hovertitle;
-    animation-fill-mode:forwards;
-    /* fill-mode:forwards prevents animation reset until hover is complete */
-}
-
-.grow:hover {
-    animation-duration:2s;
-    animation-name:grow;
-    animation-fill-mode:forwards;
-}
-
-   
-@keyframes hovertitle {
-    from {
-       
-    }
-
-    to {
-        background-color:rgba(0,0,0,.8);
-        color:#ffffff;
-    }
-}
-
-@keyframes grow {
-    0% {
-
-    }
-    100% {
-        transition: all 2s ease-in-out; 
-        transform: scale(1.1); 
-    }
-}
-
-.waitText {
-    font-size:22px; max-width:800px; display:block; margin:0 auto;
-}
-
-/* 3. BUTTONS */
-
-.doIt {
-    background-color:#14abcc;
-    max-width:200px;
-    width:100%;
-    display:block;
-    margin: 0 auto;
-    margin-top:100px;
-    height:50px;
-    line-height:50px;
-    font-size:25px;
-    text-align:center;
-    border-radius:2px;
-    color:#fff;
-    font-weight:bold;
-    font-weight:700;
-    font-size:30px;
-}
-
-/* SPECIFIC DEVICE STYLING - MEDIA QUERIES */
-/* NEXUX 10 STYLING */
-@media (width:800px) and (height:1280px){
-    .title h1:nth-child(2)  {
-        font-size:7.41vw;
-    }
-    .waitText {
-        font-size:5vw;
-        text-align:justify;
-    }
-
-    .flex-container {
-        width:700px;
-    }
-
-    .logo {
-        width:300px;
-    }
-
-    .title h1 {
-        font-size:10px;
-    }
-}
-
-
-
-
-
-/* IN PROGRESS CONSTRUCTION */
-.onepage-pagination, 
-.section:nth-child(2),
-.section:nth-child(3),
-.section:nth-child(4),
-.section:nth-child(5)
- {
+.mobile {
     display:none;
 }
 
-@media(min-width:1200px){
-    .noSelection {
-        margin-top:125px;
+@media(max-width:600px){
+    .text {
+        font-size:3em;
     }
 
-}
-
-.portfolio {
-    margin-top:100px;
-    font-size:25px;
-}
-
-.portfolio i {
-    padding:25px;
-}
-
-.portfolio a,
-.waitText a:hover {
-    color:#000;
-}
-
-.portfolio a:hover,
-.waitText a {
-    color:#ff0064;
-}
-
-/* generic mobile stylings */
-
-@media (max-height:800px) and (max-width:800px){
-    .titleGrid {
-        height:60px;
+    .svg-wrapper {
+        display:none;
     }
-    .noSelection{margin-top:30px;}
+
+    .mobile {
+        display:block;
+        font-size:3em;
+    }
+}
+
+/* 3. Header */
+#header div {
+}
+
+#header {
+    text-align:center;
+    background:rgba(0,0,0,.5);
+}
+
+/* Remove if !SVG */
+#header h1 {
+    font-size:4em;
+    text-transform:lowercase;
+}
+
+@media (max-width:500px){
+    #header h1 {
+    font-size:4em;
+    text-transform:lowercase;
+}
+    #header h3 {
+    font-size:3em;
+}
+}
+
+#header h3 {
+    font-size:3em;
+}
+
+@media(min-width:600px){
+    #header h3 {
+    margin-top:-20px;}
+}
+
+#header p {
+    font-size:1.5em;
+}
+
+#header ul {
+    list-style:none;
+    padding:unset;
+    margin:unset;
+}
+
+
+@media (max-width:800px){
+    #header ul {
+        display:none;
+    }
+}
+
+
+#header li {
+    display:inline;
+    padding: 0 10px 0 10px;
+    font-size:2em;
+}
+
+/*.adjust {
+    margin-top:-150px;
+}*/
+
+/* 4. Portfolio */
+#portfolio {
+    height:100%;
+    background-color:#f5f5f5;
+    padding:100px 50px 100px 50px;
+}
+
+#portfolio > h1 {
+    text-align:center;
+}
+
+/* 5. About */
+#about {
+    height:100%;
+    background-color:#f5f5f5;
+    padding:100px 50px 100px 50px;
+}
+
+#about p {
+    font-size:20px;
+}
+
+#about i {
+    font-size:75px;
+    text-align:center;
+}
+
+
+#about div {
+
+}
+
+#about h1, #about p {
     
-    .title h1 {
-        margin-top:30px;
-        font-size:25px;
-        font-weight:700;
-        
-    }
+    text-align:center;
+}
 
-    .portfolio {
-        margin-top:30px;
-        font-size:18px;
-    }
+#about .flex-container {
+    justify-content:center;
+}
 
-    .waitText{
-        font-size:18px;
-    }
+.icon {
+    width:100px;
+    float:left;
+}
 
-    .portfolio i {
-        font-size:25px;
-        padding:15px;
+.icon i {
+    line-height:unset;
+    display:block;
+    margin:0 auto;
+    text-align:center;
+}
+
+.iconContainer {
+    display:block;
+    margin:0 auto;
+    max-width:500px;
+    padding-top:50px;
+}
+
+@media (max-width:500px){
+    #about i {
+        font-size:40px;
+    }
+    .icon {
+        width:50px;
+        float:left;
     }
 }
 
-/* GALAXY S5 */
-@media (height:640px) and (width:360px){
-    .titleGrid {
-        height:60px;
-    }
-
-    .title h1 {
-        margin-top:20px;
-    }
-
-    .portfolio {
-        margin-top:30px;
-    }
+/* Contact */
+.contactFilm {
+    padding:100px 50px 100px 50px;
 }
 
-/* NEXUS 5X */
-@media (height:732px) and (width:412px){
-    .titleGrid {
-        height:60px;
-    }
-
-    .title h1 {
-        margin-top:40px;
-    }
-
-    .portfolio {
-        margin-top:40px;
-    }
+form { 
+    max-width:420px; margin:50px auto; 
+    padding:20px;
 }
 
-/* NEXUS 10 */
-@media (height:1280px) and (width:800px){
-    .titleGrid {
-        height:60px;
-    }
-    .noSelection{margin-top:100px;}
-    .title h1 {
-        margin-top:100px;
-        font-size:50px;
-        font-weight:700;
-    }
-
-    .waitText {
-        font-size:50px;
-    }
-
-    .portfolio {
-        font-size:50px;
-    }
-
-    .portfolio {
-        margin-top:100px;
-    }
+.feedback-input {
+  color:white;
+  font-family: "Josefin Sans Light";
+  font-weight:500;
+  font-size: 18px;
+  border-radius: 5px;
+  line-height: 22px;
+  background-color: transparent;
+  border:2px solid #758555;
+  transition: all 0.3s;
+  padding: 13px;
+  margin-bottom: 15px;
+  width:100%;
+  box-sizing: border-box;
+  outline:0;background:rgb(30,30,40); 
 }
 
-/* NEXUS 7 */
-@media (height:1280px) and (width:800px){
-    .titleGrid {
-        height:60px;
-    }
-    .noSelection{margin-top:100px;}
-    .title h1 {
-        margin-top:100px;
-        font-size:50px;
-        font-weight:700;
-    }
+.feedback-input:focus { border:2px solid #a2b881; }
 
-    .waitText {
-        font-size:50px;
-    }
-
-    .portfolio {
-        font-size:50px;
-    }
-
-    .portfolio {
-        margin-top:100px;
-    }
+textarea {
+  height: 150px;
+  line-height: 150%;
+  resize:vertical;
 }
 
-/* iPHONE 5 */
-@media (height:568px) and (width:320px){
-    .titleGrid {
-        height:60px;
-    }
+/* dark 758555 */
+/* light a2b881 */
 
-    .title h1 {
-        margin-top:20px;
-        font-size:25px;
-        font-weight:bold;
-    }
+[type="submit"] {
+    font-family: "Josefin Sans Light";
+  width: 100%;
+  background:#758555;
+  border-radius:5px;
+  border:0;
+  cursor:pointer;
+  color:white;
+  font-size:24px;
+  padding-top:10px;
+  padding-bottom:10px;
+  transition: all 0.3s;
+  margin-top:-4px;
+  font-weight:700;
+}
+[type="submit"]:hover { background:#a2b881; }
 
-    .waitText {
-        font-size:18px;
-    }
-
-    .portfolio {
-        margin-top:30px;
-    }
+.contactFilm {
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,.5);
+}
+#contact h1 {
+    text-align:center;
+    color:#fff;
 }
 
-/* iPHONE 6 */
-@media (height:667px) and (width:375px){
-    .titleGrid {
-        height:60px;
-    }
-
-    .title h1 {
-        margin-top:40px;
-        font-size:35px;
-    }
-
-    .waitText {
-        font-size:18px;
-    }
-
-    .portfolio {
-        margin-top:40px;
-    }
+/* Header Button Styles */
+.btn {
+    max-width:200px;
+    font-size:20px;
+    display:block;
+    margin:0 auto;
+    margin-top:-30px;
 }
 
-/* iPHONE 6+ */
-@media (height:736px) and (width:414px){
-    .titleGrid {
-        height:60px;
+@media (max-width:350px){
+    .btn {
+        font-size:16px;
     }
 
-    .title h1 {
-        margin-top:50px;
-    }
-
-    .waitText {
-        font-size:20px;
-    }
-
-    .portfolio {
-        margin-top:50px;
-    }
-}
-
-
-/* iPAD */
-@media (height:1024px) and (width:768px){
-    .titleGrid {
-        height:60px;
-    }
-    .noSelection{margin-top:100px;}
-    .title h1 {
-        margin-top:100px;
-        font-size:50px;
-    }
-
-    .waitText {
-        font-size:30px;
-    }
-
-    .portfolio {
-        font-size:30px;
-    }
-
-    .portfolio {
-        margin-top:100px;
+    #about {
+        padding:50px 50px 100px 50px;
     }
 }
