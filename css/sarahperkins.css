@@ -1,0 +1,111 @@
+﻿/* Full Home Page */
+html, body, section {
+    height:100%;
+}
+
+/* Hide Potential Overflow on Desktops */
+@media(min-width:1100px){
+    html, body, section {
+        overflow:hidden;
+    }
+}
+
+/* Landing Picture */
+#home {
+    background:url(../img/notepad.jpeg);
+    background-position: center center;
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+    background-size:cover;
+}
+
+/* Overlaying Header */
+#header {
+    position:absolute;
+    padding:15px;
+}
+
+/* Removing Margins */
+#header h1, #home h1 {
+    margin:unset;margin:0;
+}
+
+/* Removing a link color */
+a, a:hover {
+    color:unset;
+    color:#333333;
+    text-decoration:unset;
+}
+
+/* Creating a link animation */
+    a:hover, a:focus {
+        /* To make tranformation work */
+        display: inline-block;
+
+        -webkit-animation: alink 2s ease forwards; /* Safari 4+ */
+        -moz-animation: alink 2s ease forwards; /* Fx 5+ */
+        -o-animation: alink 2s ease forwards; /* Opera 12+ */
+        animation: alink 2s ease forwards; /* IE 10+, Fx 29+ */
+    }
+/* Off Center Nav */
+#home ul {
+    font-size:70px;
+    color:#ffffd4;
+    padding:50px;
+    list-style:none;
+    text-align:center;
+    font-family: 'Rock Salt', cursive;
+    font-weight:100;
+    position:absolute;
+    left:10vw;
+    bottom:200px;
+}
+
+/* Media Queries to Fit to Notepad */
+@media (min-width:1850px) (max-width:1919px){
+    #home ul {
+        left:300px;
+        bottom:200px;
+    }
+}
+@media (min-width:1750px) (max-width:1849px){
+    #home ul {
+        left:280px;
+        bottom:200px;
+    }
+}
+
+li {
+    padding:20px;
+}
+
+/* Center Offcenter Div on Smaller Screens */
+@media (max-width:1000px){
+
+}
+
+/* Fonts */
+
+/* Animations */
+/* A LINK */
+@-webkit-keyframes alink {
+  0%   { opacity: 1; }
+  100% { transform:scale(1.1);
+         color:#000;
+  }
+}
+@-moz-keyframes alink {
+  0%   { opacity: 1; }
+  100% { transform:scale(1.1);
+         color:#000; }
+}
+@-o-keyframes alink {
+  0%   { opacity: 1; }
+  100% { transform:scale(1.1);
+         color:#000; }
+}
+@keyframes alink {
+  0%   { opacity: 1; }
+  100% { transform:scale(1.1);
+         color:#000; }
+}
