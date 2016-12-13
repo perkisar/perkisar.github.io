@@ -244,6 +244,14 @@ nav li {
     text-align:center;
 }
 
+#portfolio a {
+    font-size:25px;
+    max-width:150px;
+    text-align:center;
+    display:block;
+    margin:0 auto;
+}
+
 /* 7. About */
 #about {
     height:100%;
