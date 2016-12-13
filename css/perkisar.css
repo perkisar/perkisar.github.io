@@ -1,9 +1,16 @@
-﻿/* TABLE OF CONTENTS
+﻿/* Copyright Sarah Perkins 2016
+    
+    TABLE OF CONTENTS
 
 	1. Global Styling
-    2. Vertical Centerring
-    3. Header
-    4. Section One
+    2. Navigation
+    3. Vertical Centering of Header
+    4. SVG Animation
+    5. Header
+    6. Portfolio
+    7. About
+    8. Content
+    9. Header Button Styles
 */
 
 
@@ -98,7 +105,7 @@ nav li {
     font-size:2em;
 }
 
-/* 2. Vertical Centering */
+/* 3. Vertical Centering of Header */
 
 #header {
     height:100%;
@@ -115,7 +122,7 @@ nav li {
     max-width: 50%;
 }
 
-/* SVG Header Text */
+/* 4. SVG Animation */
 .svg-wrapper {
   
   margin: 0 auto;
@@ -164,7 +171,7 @@ nav li {
     }
 }
 
-/* 3. Header */
+/* 5. Header */
 #header div {
 }
 
@@ -226,7 +233,7 @@ nav li {
     margin-top:-150px;
 }*/
 
-/* 4. Portfolio */
+/* 6. Portfolio */
 #portfolio {
     height:100%;
     background-color:#f5f5f5;
@@ -237,7 +244,7 @@ nav li {
     text-align:center;
 }
 
-/* 5. About */
+/* 7. About */
 #about {
     height:100%;
     background-color:#f5f5f5;
@@ -296,7 +303,7 @@ nav li {
     }
 }
 
-/* Contact */
+/* 8. Contact */
 .contactFilm {
     padding:100px 50px 100px 50px;
 }
@@ -361,7 +368,7 @@ textarea {
     color:#fff;
 }
 
-/* Header Button Styles */
+/* 9. Header Button Styles */
 .btn {
     max-width:200px;
     font-size:20px;
