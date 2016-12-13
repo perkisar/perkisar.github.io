@@ -25,8 +25,8 @@
     <script type="text/javascript" src="plugins/tipped/js/tipped/tipped.js"></script>
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
-    <script type="text/javascript" src="js/skill tooltips.js"></script>
     <script src="js/modernizr.custom.js"></script>
+    <script type="text/javascript" src="js/skilltooltips.js"></script>
     <script>
     </script>
 </head>
@@ -54,38 +54,20 @@
                     <li><a onclick="$('.main').moveTo(2);" href="#">Portfolio</a></li>
                     <li><a onclick="$('.main').moveTo(3);" href="#">About</a></li>
                     <li><a onclick="$('.main').moveTo(4);" href="#">Contact</a></li>
+                    <li><a style="display:none;" href="/old.html">Contact</a></li>
                 </ul>
             </div>
     </section>
     <section id="portfolio">
         <h1>Portfolio</h1>
-        <ul id="og-grid" class="og-grid">
-            <li>
-                <a href="http://uptownbarrelroom.com" data-largesrc="img/1.jpg" data-title="The Uptown Barrel Room" 
-                   data-description="A classy, clean website for a wine bar restaurant in Downtown Vancouver.">
-                    <img src="img/thumbs/1.jpg" alt="img01" />
-                </a>
-            </li>
-            <li>
-                <a href="" data-largesrc="img/1.jpg" data-title="Azuki"
-                   data-description="Swiss">
-                    <img src="img/thumbs/1.jpg" alt="img01" />
-                </a>
-            </li>
-        </ul>
 
     </section>
     <section id="about" ng-controller="SkillsController">
-        <!--<div>
-            <h1>About</h1>
-            <p>Look at this arbitrary list of things I know in case that sort of thing is important to you.</p>
-            <span ng-repeat="skill in skills" title="{{skill.tooltip}}" class="skillTooltip devicons devicons-{{ skill.icon }}"><br ng-if="!($index%5)" /></span>
-        </div>-->
         <h1>About</h1>
         <p>Look at this arbitrary list of things I know in varying degrees of proficiency.</p>
         <div class="iconContainer">
             <div class="icon" ng-repeat="skill in skills">
-                <i title="{{skill.tooltip}}" class="skillTooltip devicon-{{ skill.icon }} colored"></i>
+                <i class="skillTooltip devicon-{{ skill.icon }} colored" title="{{ skill.tooltip }}" ></i>
             </div>
         </div>
         <div class="clearfix"></div>
@@ -112,7 +94,6 @@
     <script>
         $(function () {
             $('#main').onepage_scroll();
-            Grid.init();
         })
     </script>
 
