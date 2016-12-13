@@ -120,11 +120,15 @@
     </section>
     <section id="contact">
         <div class="contactFilm">
-            <form>
-                <input name="name" type="text" class="feedback-input" placeholder="Name" />
-                <input name="email" type="text" class="feedback-input" placeholder="Email" />
-                <input name="subject" type="text" class="feedback-input" placeholder="Subject" />
-                <textarea name="text" class="feedback-input" placeholder="Message"></textarea>
+            <form method="post" action="contact/contactengine.php">
+                <input name="Name" type="text" class="feedback-input" 
+                       placeholder="Name" id="Name" />
+                <input name="Email" type="text" class="feedback-input" 
+                       placeholder="Email" id="Email or Phone Number" />
+                <input name="Subject" type="text" class="feedback-input" 
+                       placeholder="Subject" id="Subject"/>
+                <textarea name="Message" class="feedback-input" 
+                          placeholder="Message" id="Message"></textarea>
                 <input type="submit" value="SUBMIT" />
             </form>
         </div>
